@@ -22,7 +22,7 @@ The power management subsystem provides the following functions:
 ## Directory Structure
 
 ```
-base/powermgr/powermgr_cangjie_api
+base/powermgr/powermgr_cangjie_wrapper
 ├── ohos             # Cangjie Power Management code
 ├── figures          # architecture pictures
 ```
@@ -40,6 +40,6 @@ As shown in the system architecture, the power management subsystem consists of 
 
 **Power Management Subsystem**
 
-powermgr_cangjie_api
+powermgr_cangjie_wrapper
 
 [powermgr_power_manager](https://gitee.com/openharmony/powermgr_power_manager)

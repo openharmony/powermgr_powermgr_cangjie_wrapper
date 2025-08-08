@@ -1,0 +1,3 @@
+# powermgr_powermgr_cangjie_wrapper
+
+电源管理子系统仓颉封装层

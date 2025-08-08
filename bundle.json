@@ -1,0 +1,42 @@
+{
+    "name": "@ohos/powermgr_cangjie_api",
+    "description": "Battery, charge and discharge status inquiry, status reporting",
+    "version": "6.0",
+    "license": "Apache-2.0",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "base/powermgr/powermgr_cangjie_api"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+        "name": "powermgr_cangjie_api",
+        "subsystem": "powermgr",
+        "syscap": [
+            "SystemCapability.PowerManager.BatteryManager.Core"
+        ],
+        "features": [],
+        "adapted_system_type": [
+            "standard"
+        ],
+        "rom": "30000KB",
+        "ram": "100000KB",
+        "deps": {
+            "components": [
+                "cangjie_api"
+            ]
+        },
+        "build": {
+            "sub_component": [
+                "//base/powermgr/powermgr_cangjie_api/ohos/battery_info:ohos.battery_info"
+            ],
+            "inner_kits": [
+                {
+                    "name": "//base/powermgr/powermgr_cangjie_api/ohos/battery_info:ohos.battery_info"
+                }
+            ],
+            "test": [
+            ]
+        }
+    }
+}

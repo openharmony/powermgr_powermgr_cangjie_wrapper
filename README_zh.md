@@ -22,7 +22,7 @@
 ## 目录
 
 ```
-base/powermgr/powermgr_cangjie_api
+base/powermgr/powermgr_cangjie_wrapper
 ├── ohos                # 仓颉电源管理接口实现
 ├── figures             # 存放readme中的架构图
 ```
@@ -40,6 +40,6 @@ base/powermgr/powermgr_cangjie_api
 
 **电源管理子系统**
 
-powermgr_cangjie_api
+powermgr_cangjie_wrapper
 
 [powermgr_power_manager](https://gitee.com/openharmony/powermgr_power_manager)

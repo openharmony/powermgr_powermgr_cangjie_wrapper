@@ -21,12 +21,12 @@ ohos_cj_library("ohos.battery_info") {
   ]
 
   cj_external_deps = [
-    "cangjie_api:ohos.labels",
+    "cangjie_ark_interop:ohos.labels",
   ]
 
   external_deps = [ "battery_manager:cj_battery_info_ffi" ]
 
   subsystem_name = "powermgr"
-  part_name = "powermgr_cangjie_api"
+  part_name = "powermgr_cangjie_wrapper"
   lib_name = "battery_info"
 }

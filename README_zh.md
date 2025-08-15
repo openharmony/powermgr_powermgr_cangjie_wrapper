@@ -1,6 +1,7 @@
-# 电源管理仓颉
+# 电源服务仓颉接口
 
 ## 简介
+电源服务仓颉接口是在 OpenHarmony 上基于电源管理子系统能力之上封装的仓颉API。
 
 电源管理仓颉提供如下功能：
 
@@ -40,6 +41,4 @@ base/powermgr/powermgr_cangjie_wrapper
 
 **电源管理仓颉**
 
-powermgr_cangjie_wrapper
-
-[powermgr_power_manager](https://gitee.com/openharmony/powermgr_power_manager)
+[powermgr_power_manager](https://gitee.com/openharmony/powermgr_power_manager/blob/master/README_zh.md)

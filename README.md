@@ -1,8 +1,8 @@
-# Power Management
+# powermgr_cangjie_wrapper
 
 ## Introduction
 
-The power management subsystem provides the following functions:
+The powermgr_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the power management subsystem. The power management subsystem provides the following functions:
 
 1.  System restarting: restarts or shuts down the system.
 2.  System power management: manages the system power status and running lock.
@@ -14,10 +14,9 @@ The power management subsystem provides the following functions:
 8.  Battery service for mini-, small-, and standard-system devices
 9.  Power management service for mini-, small-, and standard-system devices
 
-**Figure  1**  Power management subsystem architectur
+**Figure  1** powermgr_cangjie_wrapper architectur
 
-
-![](figures/power-management-subsystem-architecture.png)
+![](figures/powermgr_cangjie_wrapper_architecture_en.png)
 
 ## Directory Structure
 
@@ -40,6 +39,4 @@ As shown in the system architecture, the power management subsystem consists of 
 
 **Power Management Subsystem**
 
-powermgr_cangjie_wrapper
-
-[powermgr_power_manager](https://gitee.com/openharmony/powermgr_power_manager)
+[powermgr_power_manager](https://gitee.com/openharmony/powermgr_power_manager/blob/master/README_zh.md)

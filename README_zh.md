@@ -39,6 +39,4 @@ base/powermgr/powermgr_cangjie_wrapper
 
 ## 相关仓
 
-**电源管理仓颉**
-
 [powermgr_power_manager](https://gitee.com/openharmony/powermgr_power_manager/blob/master/README_zh.md)

@@ -14,7 +14,7 @@
 import("//build/ohos.gni")
 import("//build/cangjie/cjc.gni")
 
-ohos_cj_library("ohos.battery_info") {
+ohos_cangjie_shared_library("ohos.battery_info") {
   sources = [
     "battery_info.cj",
     "native.cj",
@@ -28,5 +28,4 @@ ohos_cj_library("ohos.battery_info") {
 
   subsystem_name = "powermgr"
   part_name = "powermgr_cangjie_wrapper"
-  lib_name = "battery_info"
 }

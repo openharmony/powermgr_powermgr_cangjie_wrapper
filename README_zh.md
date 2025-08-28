@@ -1,22 +1,12 @@
 # 电源服务仓颉接口
 
 ## 简介
+
 电源服务仓颉接口是在 OpenHarmony 上基于电源管理子系统能力之上封装的仓颉API。
 
-电源管理仓颉提供如下功能：
-
-1.  重启服务：系统重启和下电。
-2.  系统电源管理服务：系统电源状态管理和休眠运行锁管理。
-3.  显示相关的能耗调节：包括根据环境光调节背光亮度，和根据接近光亮灭屏。
-4.  省电模式 ：在不损害主要功能和性能的前提下，提供一种低功耗操作模式 。
-5.  电池服务：支持充放电、电池和充电状态的监测，包括状态的更新和上报，还包括关机充电。
-6.  温控 ：在设备温度到一定程度之后对应用、SoC、外设进行管控，限制温升 。
-7.  耗电统计： 主要包括软件耗电和硬件耗电统计，以及单个应用的耗电统计 。
-8.  轻设备电池服务。
-9.  轻设备电源管理服务。
+## 系统架构
 
 **图 1**  电源管理仓颉架构图
-
 
 ![](figures/powermgr_cangjie_wrapper_architecture.png)
 
@@ -28,15 +18,34 @@ base/powermgr/powermgr_cangjie_wrapper
 ├── figures             # 存放readme中的架构图
 ```
 
+## 约束
+
+当前开放的电源服务仓颉接口仅支持standard设备。
+
 ## 使用说明
 
-如架构图示意，电源管理提供了七个子部件，其中部分部件提供了对外接口或者公共事件通知，开发者可以根据场景使用：
+提供了以下电源服务功能：
 
-- 通过Power Manager提供的接口可以进行申请和释放休眠运行锁RunningLock、省电模式、亮度调节、重启设备、关机等操作，同时也可以通过公共事件来监听省电模式和关机状态的变化。
-- Battery Manager提供了电池信息查询的接口，同时开发者也可以通过公共事件监听电池状态和充放电状态的变化。
-- Thermal Manager提供的设备温升状态的查询接口，同时开发者也可以通过注册回调和公共事件来监听设备温升状态。
-- Battery Statistics 提供了软硬件耗电统计的功能，可以查询硬件耗电或者应用耗电情况。
+- 电池服务：支持充放电、电池和充电状态的信息显示。
+
+与arkts相比，暂不支持以下功能：
+
+- 重启服务：系统重启和下电。
+- 系统电源管理服务：系统电源状态管理和休眠运行锁管理。
+- 显示相关的能耗调节：包括根据环境光调节背光亮度，和根据接近光亮灭屏。
+- 省电模式 ：在不损害主要功能和性能的前提下，提供一种低功耗操作模式 。
+- 电池服务：电池状态检测，包括状态的更新和上报，还包括关机充电。
+- 温控 ：在设备温度到一定程度之后对应用、SoC、外设进行管控，限制温升 。
+- 耗电统计： 主要包括软件耗电和硬件耗电统计，以及单个应用的耗电统计 。
+- 轻设备电池服务。
+- 轻设备电源管理服务。
+
+电源服务相关API请参见[ohos.battery_info](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-battery_info.md)。
 
 ## 相关仓
 
 [powermgr_power_manager](https://gitee.com/openharmony/powermgr_power_manager/blob/master/README_zh.md)
+
+## 参与贡献
+
+欢迎广大开发者贡献代码、文档等，具体的贡献流程和方式请参见[参与贡献](https://gitcode.com/openharmony/docs/blob/master/zh-cn/contribute/%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE.md)。

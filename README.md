@@ -2,17 +2,9 @@
 
 ## Introduction
 
-The powermgr_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the power management subsystem. The power management subsystem provides the following functions:
+The powermgr_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the power management subsystem. 
 
-1.  System restarting: restarts or shuts down the system.
-2.  System power management: manages the system power status and running lock.
-3.  Display-related power consumption adjustment: adjusts the backlight brightness based on the ambient light and turns off the screen based on the proximity light.
-4.  Power saving: works in low power consumption mode without compromising main functions and performance.
-5.  Battery management: supports charging and discharging, battery and charging status monitoring (including status updating and reporting), and charging upon power-off.
-6.  Temperature control: restricts temperature rise through application, SoC, and peripheral control when the device temperature reaches the specified limit.
-7.  Power consumption statistics: collects statistics on the power consumption of software, hardware, and a single application.
-8.  Battery service for mini-, small-, and standard-system devices
-9.  Power management service for mini-, small-, and standard-system devices
+## System Architecture
 
 **Figure  1** powermgr_cangjie_wrapper architectur
 
@@ -26,17 +18,36 @@ base/powermgr/powermgr_cangjie_wrapper
 ├── figures          # architecture pictures
 ```
 
+## Constraints
+
+The currently open position service Cangjie interface supports only standard devices.
+
 ## Usage
 
-As shown in the system architecture, the power management subsystem consists of seven modules. Some modules provide external APIs or public event notifications. You can use them based on your use cases. The functions of key modules are described as follows:
+The following power service functions are provided:
 
-- Power Manager: provides APIs to request and release the running lock, enable the power saving mode, adjust the brightness, and restart or power off the device. It also provides public events for you to observe changes of the power saving mode and power-off status.
-- Battery Manager: provides APIs to query battery information. It also provides public events for you to observer changes of the battery status and charging/discharging status.
-- Thermal Manager: provides APIs to query the temperature rise status of a device. It also allows you to register callbacks and public events to listen for the temperature rise status of a device.
-- Battery Statistics: provides power consumption statistics on hardware and software. It allows you to query the power consumption of hardware or applications.
+- Battery Service: Supports charging and discharging, and displays information on battery and charging status.
+
+Compared to Arkts, the following functions are currently not supported:
+
+- System restarting: restarts or shuts down the system.
+- System power management: manages the system power status and running lock.
+- Display-related power consumption adjustment: adjusts the backlight brightness based on the ambient light and turns off the screen based on the proximity light.
+- Power Saving Mode: Provides a low-power operating mode without compromising essential functions and performance.
+- Battery Service: Battery status detection, including status updates and reporting, as well as charging during shutdown.
+- Temperature Control: Manages applications, SoC, and peripherals when the device temperature reaches a certain level to limit the rise in temperature.
+- Power consumption statistics: collects statistics on the power consumption of software, hardware, and a single application.
+- Battery service for mini-, small-, and standard-system devices
+- Power management service for mini-, small-, and standard-system devices
+
+For APIs related to location, please refer to [ohos.battery_info](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-battery_info.md).
 
 ## Repositories Involved
 
 **Power Management Subsystem**
 
 [powermgr_power_manager](https://gitee.com/openharmony/powermgr_power_manager/blob/master/README_zh.md)
+
+## Code Contribution
+
+Developers are welcome to contribute code, documentation, etc. For specific contribution processes and methods, please refer to [Code Contribution](https://gitcode.com/openharmony/docs/blob/master/en/contribute/code-contribution.md).

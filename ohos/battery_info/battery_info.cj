@@ -302,7 +302,7 @@ public enum BatteryChargeState {
         stagemodelonly: true,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Enable
+    Enabled
     /**
      * The battery is not being charged.
      *
@@ -313,7 +313,7 @@ public enum BatteryChargeState {
         stagemodelonly: true,
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    Disable
+    Disabled
     /**
      * The battery is fully charged.
      *
@@ -330,8 +330,8 @@ public enum BatteryChargeState {
     static func parse(value: Int32): BatteryChargeState {
         match (value) {
             case 0 => UnknownChargeState
-            case 1 => Enable
-            case 2 => Disable
+            case 1 => Enabled
+            case 2 => Disabled
             case 3 => Full
             case _ => throw IllegalArgumentException("Unknown value.")
         }

@@ -4,8 +4,6 @@
 
 电源服务仓颉接口是在 OpenHarmony 上基于电源管理子系统能力之上封装的仓颉API。
 
-## 系统架构
-
 **图 1**  电源管理仓颉架构图
 
 ![](figures/powermgr_cangjie_wrapper_architecture.png)
@@ -15,7 +13,7 @@
 ```
 base/powermgr/powermgr_cangjie_wrapper
 ├── ohos                # 仓颉电源管理接口实现
-├── figures             # 存放readme中的架构图
+└── figures             # 存放README中的架构图
 ```
 
 ## 约束
@@ -28,7 +26,7 @@ base/powermgr/powermgr_cangjie_wrapper
 
 - 电池服务：支持充放电、电池和充电状态的信息显示。
 
-与arkts相比，暂不支持以下功能：
+与ArkTS相比，暂不支持以下功能：
 
 - 重启服务：系统重启和下电。
 - 系统电源管理服务：系统电源状态管理和休眠运行锁管理。
@@ -42,10 +40,10 @@ base/powermgr/powermgr_cangjie_wrapper
 
 电源服务相关API请参见[ohos.battery_info](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_zh_cn/apis/BasicServicesKit/cj-apis-battery_info.md)。
 
-## 相关仓
-
-[powermgr_power_manager](https://gitee.com/openharmony/powermgr_power_manager/blob/master/README_zh.md)
-
 ## 参与贡献
 
 欢迎广大开发者贡献代码、文档等，具体的贡献流程和方式请参见[参与贡献](https://gitcode.com/openharmony/docs/blob/master/zh-cn/contribute/%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE.md)。
+
+## 相关仓
+
+[powermgr_power_manager](https://gitee.com/openharmony/powermgr_power_manager/blob/master/README_zh.md)

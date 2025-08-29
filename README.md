@@ -4,8 +4,6 @@
 
 The powermgr_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the power management subsystem. 
 
-## System Architecture
-
 **Figure  1** powermgr_cangjie_wrapper architectur
 
 ![](figures/powermgr_cangjie_wrapper_architecture_en.png)
@@ -42,12 +40,12 @@ Compared to Arkts, the following functions are currently not supported:
 
 For APIs related to location, please refer to [ohos.battery_info](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-battery_info.md).
 
+## Code Contribution
+
+Developers are welcome to contribute code, documentation, etc. For specific contribution processes and methods, please refer to [Code Contribution](https://gitcode.com/openharmony/docs/blob/master/en/contribute/code-contribution.md).
+
 ## Repositories Involved
 
 **Power Management Subsystem**
 
 [powermgr_power_manager](https://gitee.com/openharmony/powermgr_power_manager/blob/master/README_zh.md)
-
-## Code Contribution
-
-Developers are welcome to contribute code, documentation, etc. For specific contribution processes and methods, please refer to [Code Contribution](https://gitcode.com/openharmony/docs/blob/master/en/contribute/code-contribution.md).

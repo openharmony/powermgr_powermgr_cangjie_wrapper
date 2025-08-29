@@ -2,11 +2,18 @@
 
 ## 简介
 
-电源服务仓颉接口是在 OpenHarmony 上基于电源管理子系统能力之上封装的仓颉API。
+电源服务仓颉接口是在 OpenHarmony 上基于电源管理子系统能力之上封装的仓颉API。当前开放的位置服务仓颉接口仅支持standard设备。
 
 **图 1**  电源管理仓颉架构图
 
 ![](figures/powermgr_cangjie_wrapper_architecture.png)
+
+电源管理仓颉接口当前由4个部分组成：
+
+- 电源信息
+- 充电器类型枚举
+- 充电状态枚举
+- 电池健康状态枚举
 
 ## 目录
 
@@ -15,10 +22,6 @@ base/powermgr/powermgr_cangjie_wrapper
 ├── ohos                # 仓颉电源管理接口实现
 └── figures             # 存放README中的架构图
 ```
-
-## 约束
-
-当前开放的电源服务仓颉接口仅支持standard设备。
 
 ## 使用说明
 

@@ -23,8 +23,9 @@
 ```
 base/powermgr/powermgr_cangjie_wrapper
 ├── figures             # 存放README中的架构图
-└── ohos                # 仓颉电源管理接口实现
-    └── battery_info
+├── ohos                # 仓颉电源管理接口实现
+|   └── battery_info    # battery_info仓颉接口代码目录
+└── test                # 测试用例代码
 ```
 
 ## 使用说明

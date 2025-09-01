@@ -24,8 +24,9 @@ As shown in the architecture diagram:
 ```
 base/powermgr/powermgr_cangjie_wrapper
 ├── figures          # architecture pictures
-└── ohos             # Cangjie Power Management code
-    └── battery_info
+├── ohos             # Cangjie Power Management code
+|   └── battery_info
+└── test
 ```
 
 ## Usage

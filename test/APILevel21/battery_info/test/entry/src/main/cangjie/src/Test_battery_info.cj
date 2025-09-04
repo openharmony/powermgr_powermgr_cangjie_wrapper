@@ -54,7 +54,7 @@ class Test_battery_info {
 //        Hilog.info(0, "cangjie", batteryCapacityLevelInfo)
 
         @Expect(pluggedTypeInfo == BatteryPluggedType.UnknownType || pluggedTypeInfo == BatteryPluggedType.Ac || pluggedTypeInfo == BatteryPluggedType.Wireless || pluggedTypeInfo == BatteryPluggedType.Usb)
-        @Expect(chargingStatusInfo == BatteryChargeState.UnknownChargeState || chargingStatusInfo == BatteryChargeState.Enable || chargingStatusInfo == BatteryChargeState.Disable || chargingStatusInfo == BatteryChargeState.Full)
+        @Expect(chargingStatusInfo == BatteryChargeState.UnknownChargeState || chargingStatusInfo == BatteryChargeState.Enabled || chargingStatusInfo == BatteryChargeState.Disabled || chargingStatusInfo == BatteryChargeState.Full)
     }
 
     @TestCase

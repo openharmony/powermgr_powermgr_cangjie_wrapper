@@ -19,13 +19,13 @@
 package ohos_app_cangjie_entry
 
 import std.unittest.testmacro.*
-import kit.BasicServicesKit.*
+import BasicServicesKit.*
 import std.convert.*
 import std.unittest.*
 import std.unittest.common.*
 import std.unittest.testmacro.*
 import ohos.base.*
-import kit.PerformanceAnalysisKit.Hilog
+import PerformanceAnalysisKit.Hilog
 
 @Test
 class Test_battery_info {

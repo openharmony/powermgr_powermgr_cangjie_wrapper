@@ -9,10 +9,14 @@ The powermgr_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based 
 ![](figures/powermgr_cangjie_wrapper_architecture_en.png)
 
 As shown in the architecture diagram:
+
 - Battery Service Wrapper: Provides methods for battery level information query, charger type enumeration, battery health status enumeration, and additional information query enumeration.
 - Cangjie Power Service FFI Encapsulation Definition: Responsible for defining the C-language interoperation interface with Cangjie, which is used to implement the capabilities of Cangjie's power management service.
-- Battery Management Service: Calls the underlying power driver to provide C language interfaces for basic power management service functions.
-- Cangjie ark interop: Encapsulates public interfaces for C language interoperation, and provides Cangjie tag class implementation for annotating Cangjie APIs, as well as providing BusinessException exception class definitions thrown to users.
+
+Dependencies:
+
+- Power Management Service: Calls the underlying power driver to provide C language interfaces for basic power management service functions that can be called by the power service Cangjie interface.
+- Cangjie Interop: Encapsulates public interfaces for C language interoperation, and provides Cangjie tag class implementation for annotating Cangjie APIs, as well as providing BusinessException exception class definitions thrown to users.
 
 ## Directory Structure
 

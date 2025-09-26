@@ -1,6 +1,6 @@
 {
     "name": "@ohos/powermgr_cangjie_wrapper",
-    "description": "Battery status reporting",
+    "description": "Display of charge-discharge, battery, and state of charge information",
     "version": "6.0",
     "license": "Apache-2.0",
     "publishAs": "code-segment",

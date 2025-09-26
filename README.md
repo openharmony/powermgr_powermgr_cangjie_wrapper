@@ -16,7 +16,7 @@ Interface layer description:
 
 Framework layer description:
 
-- Battery Service Wrapper: Provides battery level information query, charger type enumeration, battery health status enumeration, and additional information query enumeration methods. This encapsulation layer is a Cangjie encapsulation implementation of battery service functionality based on the power management service.
+- Battery Service Wrapper: Provides battery level information query, charger type enumeration, battery status enumeration, and additional information query enumeration methods. This encapsulation layer is a Cangjie encapsulation implementation of battery service functionality based on the power management service.
 
 Cangjie Power Service Dependencies:
 

@@ -2,16 +2,26 @@
 
 ## Introduction
 
-The powermgr_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony based on the capabilities of the power management subsystem. Provides the ability to query battery status and charge-discharge status.The currently open power service Cangjie interface supports only standard devices.
+The powermgr_cangjie_wrapper is a Cangjie API encapsulated on OpenHarmony for application developers to provide battery status and charge-discharge status query capabilities. The currently open power service Cangjie interface only supports standard devices.
 
 **Figure 1** powermgr_cangjie_wrapper architecture
 
 ![](figures/powermgr_cangjie_wrapper_architecture_en.png)
 
 As shown in the architecture diagram:
-- Battery Service Wrapper: Provides methods for battery level information query, charger type enumeration, battery health status enumeration, and additional information query enumeration.
-- Cangjie Power Service FFI Encapsulation Definition: Responsible for defining the C-language interoperation interface with Cangjie, which is used to implement the capabilities of Cangjie's power management service.
-- Power Management Service Framework: Responsible for providing basic functions of the power management service, and encapsulating C interfaces to provide them to Cangjie for interoperation.
+
+Interface layer description:
+
+- Battery Service API: Cangjie public interfaces based on battery service encapsulation exposed to developers.
+
+Framework layer description:
+
+- Battery Service Wrapper: Provides battery level information query, charger type enumeration, battery status enumeration, and additional information query enumeration methods. This encapsulation layer is a Cangjie encapsulation implementation of battery service functionality based on the power management service.
+
+Cangjie Power Service Dependencies:
+
+- Power Management Service: Calls the underlying power driver to provide native basic power management service functionality implementation.
+- Cangjie Interop: Encapsulates public interfaces for C language interoperation, and provides Cangjie tag class implementation for annotating Cangjie APIs, as well as providing BusinessException exception class definitions thrown to users.
 
 ## Directory Structure
 
@@ -21,9 +31,7 @@ base/powermgr/powermgr_cangjie_wrapper
 ├── ohos                              # Cangjie Power Management code
 │   └── battery_info                  # Cangjie battery_info code
 ├── test                              # Test cases
-│   └── APILevel22                    # API Level 22 test code
-│       └── battery_info              # Battery service tests
-│           └── test                  # Test project directory
+│   └── battery_info                  # Battery service tests
 └── bundle.json                       # Component description file
 ```
 
@@ -31,6 +39,10 @@ base/powermgr/powermgr_cangjie_wrapper
 
 The following power service functions are provided:
 - Battery Service: Supports charging and discharging, and displays information on battery and charging status
+
+Power service usage examples please refer to [Battery Information Development Guide](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/Dev_Guide/source_en/basic-services/cj-battery-info-development-guide.md).
+
+## Constraints
 
 Compared with the API capabilities provided by ArkTS, the following functions are currently not supported:
 - Restart Service: System restart and power off
@@ -42,8 +54,6 @@ Compared with the API capabilities provided by ArkTS, the following functions ar
 - Power consumption statistics: Mainly includes software power consumption and hardware power consumption statistics, as well as power consumption statistics for individual applications
 - Battery service for lightweight devices
 - Power management service for lightweight devices
-
-For APIs related to battery info, please refer to [Battery Management API](https://gitcode.com/openharmony-sig/arkcompiler_cangjie_ark_interop/blob/master/doc/API_Reference/source_en/apis/BasicServicesKit/cj-apis-battery_info.md).
 
 ## Code Contribution
 

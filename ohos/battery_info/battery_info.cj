@@ -13,6 +13,8 @@
  * limitations under the License.
  */
 
+// The Cangjie API is in Beta. For details on its capabilities and limitations, please refer to the README file.
+
 package ohos.battery_info
 
 import ohos.labels.APILevel
@@ -23,8 +25,6 @@ import std.deriving.Derive
  * Obtains battery information of a device.
  * Battery information includes the remaining battery power,
  * voltage, temperature, model, and charger type.
- *
- * @relation declare namespace batteryInfo
  */
 @!APILevel[
     since: "22",
@@ -33,8 +33,6 @@ import std.deriving.Derive
 public class BatteryInfo {
     /**
      * Battery state of charge (SoC) of the current device, in percent.
-     *
-     * @relation const batterySOC: number
      */
     @!APILevel[
         since: "22",
@@ -48,8 +46,6 @@ public class BatteryInfo {
 
     /**
      * Battery charging status of the current device.
-     *
-     * @relation const chargingStatus: BatteryChargeState
      */
     @!APILevel[
         since: "22",
@@ -64,8 +60,6 @@ public class BatteryInfo {
 
     /**
      * Battery health state of the current device.
-     *
-     * @relation const healthStatus: BatteryHealthState
      */
     @!APILevel[
         since: "22",
@@ -80,8 +74,6 @@ public class BatteryInfo {
 
     /**
      * Charger type of the current device.
-     *
-     * @relation const pluggedType: BatteryPluggedType
      */
     @!APILevel[
         since: "22",
@@ -96,8 +88,6 @@ public class BatteryInfo {
 
     /**
      * Battery voltage of the current device, in µV.
-     *
-     * @relation const voltage: number
      */
     @!APILevel[
         since: "22",
@@ -111,8 +101,6 @@ public class BatteryInfo {
 
     /**
      * Battery immediate current of the current device, in mA.
-     *
-     * @relation const nowCurrent: number
      */
     @!APILevel[
         since: "22",
@@ -126,8 +114,6 @@ public class BatteryInfo {
 
     /**
      * Battery technology of the current device.
-     *
-     * @relation const technology: string
      */
     @!APILevel[
         since: "22",
@@ -144,8 +130,6 @@ public class BatteryInfo {
 
     /**
      * Battery temperature of the current device, in 0.1℃.
-     *
-     * @relation const batteryTemperature: number
      */
     @!APILevel[
         since: "22",
@@ -159,8 +143,6 @@ public class BatteryInfo {
 
     /**
      * Battery present state of the current device.
-     *
-     * @relation const isBatteryPresent: boolean
      */
     @!APILevel[
         since: "22",
@@ -174,8 +156,6 @@ public class BatteryInfo {
 
     /**
      * Battery capacity level of the current device.
-     *
-     * @relation const batteryCapacityLevel: BatteryCapacityLevel
      */
     @!APILevel[
         since: "22",
@@ -191,8 +171,6 @@ public class BatteryInfo {
 
 /**
  * Charger type of a device.
- *
- * @relation export enum BatteryPluggedType
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -202,8 +180,6 @@ public class BatteryInfo {
 public enum BatteryPluggedType {
     /**
      * Unknown type
-     *
-     * @relation NONE = 0
      */
     @!APILevel[
         since: "22",
@@ -212,8 +188,6 @@ public enum BatteryPluggedType {
     UnknownType
     /**
      * AC charger
-     *
-     * @relation AC = 1
      */
     | @!APILevel[
         since: "22",
@@ -222,8 +196,6 @@ public enum BatteryPluggedType {
     Ac
     /**
      * USB charger
-     *
-     * @relation USB = 2
      */
     | @!APILevel[
         since: "22",
@@ -232,8 +204,6 @@ public enum BatteryPluggedType {
     Usb
     /**
      * Wireless charger
-     *
-     * @relation WIRELESS = 3
      */
     | @!APILevel[
         since: "22",
@@ -255,8 +225,6 @@ public enum BatteryPluggedType {
 
 /**
  * Battery charging status of a device.
- *
- * @relation export enum BatteryChargeState
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -266,8 +234,6 @@ public enum BatteryPluggedType {
 public enum BatteryChargeState {
     /**
      * Unknown state.
-     *
-     * @relation NONE = 0
      */
     @!APILevel[
         since: "22",
@@ -276,8 +242,6 @@ public enum BatteryChargeState {
     UnknownChargeState
     /**
      * The battery is being charged.
-     *
-     * @relation ENABLE = 1
      */
     | @!APILevel[
         since: "22",
@@ -286,8 +250,6 @@ public enum BatteryChargeState {
     Enabled
     /**
      * The battery is not being charged.
-     *
-     * @relation DISABLE = 2
      */
     | @!APILevel[
         since: "22",
@@ -296,8 +258,6 @@ public enum BatteryChargeState {
     Disabled
     /**
      * The battery is fully charged.
-     *
-     * @relation FULL = 3
      */
     | @!APILevel[
         since: "22",
@@ -319,8 +279,6 @@ public enum BatteryChargeState {
 
 /**
  * Battery health status of a device.
- *
- * @relation export enum BatteryHealthState
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -330,8 +288,6 @@ public enum BatteryChargeState {
 public enum BatteryHealthState {
     /**
      * Unknown state.
-     *
-     * @relation UNKNOWN = 0
      */
     @!APILevel[
         since: "22",
@@ -340,8 +296,6 @@ public enum BatteryHealthState {
     UnknownHealthState
     /**
      * The battery is in healthy state.
-     *
-     * @relation GOOD = 1
      */
     | @!APILevel[
         since: "22",
@@ -350,8 +304,6 @@ public enum BatteryHealthState {
     Good
     /**
      * The battery is overheated.
-     *
-     * @relation OVERHEAT = 2
      */
     | @!APILevel[
         since: "22",
@@ -360,8 +312,6 @@ public enum BatteryHealthState {
     Overheat
     /**
      * The battery voltage is over high.
-     *
-     * @relation OVERVOLTAGE = 3
      */
     | @!APILevel[
         since: "22",
@@ -370,8 +320,6 @@ public enum BatteryHealthState {
     Overvoltage
     /**
      * The battery temperature is low.
-     *
-     * @relation COLD = 4
      */
     | @!APILevel[
         since: "22",
@@ -380,8 +328,6 @@ public enum BatteryHealthState {
     Cold
     /**
      * The battery is dead.
-     *
-     * @relation DEAD = 5
      */
     | @!APILevel[
         since: "22",
@@ -405,8 +351,6 @@ public enum BatteryHealthState {
 
 /**
  * Battery capacity level of a device.
- *
- * @relation export enum BatteryCapacityLevel
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -416,8 +360,6 @@ public enum BatteryHealthState {
 public enum BatteryCapacityLevel {
     /**
      * The battery is in full capacity level.
-     *
-     * @relation LEVEL_FULL = 1
      */
     @!APILevel[
         since: "22",
@@ -426,8 +368,6 @@ public enum BatteryCapacityLevel {
     LevelFull
     /**
      * The battery is in high capacity level.
-     *
-     * @relation LEVEL_HIGH = 2
      */
     | @!APILevel[
         since: "22",
@@ -436,8 +376,6 @@ public enum BatteryCapacityLevel {
     LevelHigh
     /**
      * The battery is in normal capacity level.
-     *
-     * @relation LEVEL_NORMAL = 3
      */
     | @!APILevel[
         since: "22",
@@ -446,8 +384,6 @@ public enum BatteryCapacityLevel {
     LevelNormal
     /**
      * The battery is in low capacity level.
-     *
-     * @relation LEVEL_LOW = 4
      */
     | @!APILevel[
         since: "22",
@@ -456,8 +392,6 @@ public enum BatteryCapacityLevel {
     LevelLow
     /**
      * The battery is in warning low capacity level.
-     *
-     * @relation LEVEL_WARNING = 5
      */
     | @!APILevel[
         since: "22",
@@ -466,8 +400,6 @@ public enum BatteryCapacityLevel {
     LevelWarning
     /**
      * The battery is in critical low capacity level.
-     *
-     * @relation LEVEL_CRITICAL = 6
      */
     | @!APILevel[
         since: "22",
@@ -476,8 +408,6 @@ public enum BatteryCapacityLevel {
     LevelCritical
     /**
      * The battery is in the lowest capacity level, system will shut down automatically in a few seconds.
-     *
-     * @relation LEVEL_SHUTDOWN = 7
      */
     | @!APILevel[
         since: "22",

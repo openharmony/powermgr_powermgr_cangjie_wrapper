@@ -1,4 +1,4 @@
-# powermgr_cangjie_wrapper
+# powermgr_cangjie_wrapper(beta feature)
 
 ## Introduction
 

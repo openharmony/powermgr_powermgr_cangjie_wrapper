@@ -18,6 +18,7 @@
 package ohos.battery_info
 
 import ohos.labels.APILevel
+import ohos.business_exception.*
 
 import std.deriving.Derive
 
@@ -46,6 +47,8 @@ public class BatteryInfo {
 
     /**
      * Battery charging status of the current device.
+     *
+     * @throws { BusinessException } 401 - Parameter error.
      */
     @!APILevel[
         22,
@@ -60,6 +63,8 @@ public class BatteryInfo {
 
     /**
      * Battery health state of the current device.
+     *
+     * @throws { BusinessException } 401 - Parameter error.
      */
     @!APILevel[
         22,
@@ -74,6 +79,8 @@ public class BatteryInfo {
 
     /**
      * Charger type of the current device.
+     *
+     * @throws { BusinessException } 401 - Parameter error.
      */
     @!APILevel[
         22,
@@ -88,6 +95,7 @@ public class BatteryInfo {
 
     /**
      * Battery voltage of the current device, in µV.
+     *
      */
     @!APILevel[
         22,
@@ -101,6 +109,7 @@ public class BatteryInfo {
 
     /**
      * Battery immediate current of the current device, in mA.
+     *
      */
     @!APILevel[
         22,
@@ -114,6 +123,7 @@ public class BatteryInfo {
 
     /**
      * Battery technology of the current device.
+     *
      */
     @!APILevel[
         22,
@@ -130,6 +140,7 @@ public class BatteryInfo {
 
     /**
      * Battery temperature of the current device, in 0.1℃.
+     *
      */
     @!APILevel[
         22,
@@ -143,6 +154,7 @@ public class BatteryInfo {
 
     /**
      * Battery present state of the current device.
+     *
      */
     @!APILevel[
         22,
@@ -156,6 +168,8 @@ public class BatteryInfo {
 
     /**
      * Battery capacity level of the current device.
+     *
+     * @throws { BusinessException } 401 - Parameter error.
      */
     @!APILevel[
         22,
@@ -171,6 +185,7 @@ public class BatteryInfo {
 
 /**
  * Charger type of a device.
+ *
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -180,6 +195,7 @@ public class BatteryInfo {
 public enum BatteryPluggedType {
     /**
      * Unknown type
+     *
      */
     @!APILevel[
         22,
@@ -188,6 +204,7 @@ public enum BatteryPluggedType {
     UnknownType
     /**
      * AC charger
+     *
      */
     | @!APILevel[
         22,
@@ -196,6 +213,7 @@ public enum BatteryPluggedType {
     Ac
     /**
      * USB charger
+     *
      */
     | @!APILevel[
         22,
@@ -204,6 +222,7 @@ public enum BatteryPluggedType {
     Usb
     /**
      * Wireless charger
+     *
      */
     | @!APILevel[
         22,
@@ -218,13 +237,14 @@ public enum BatteryPluggedType {
             case 1 => Ac
             case 2 => Usb
             case 3 => Wireless
-            case _ => throw IllegalArgumentException("Unknown value.")
+            case _ => throw BusinessException(401, "Parameter error.")
         }
     }
 }
 
 /**
  * Battery charging status of a device.
+ *
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -234,6 +254,7 @@ public enum BatteryPluggedType {
 public enum BatteryChargeState {
     /**
      * Unknown state.
+     *
      */
     @!APILevel[
         22,
@@ -242,6 +263,7 @@ public enum BatteryChargeState {
     UnknownChargeState
     /**
      * The battery is being charged.
+     *
      */
     | @!APILevel[
         22,
@@ -250,6 +272,7 @@ public enum BatteryChargeState {
     Enabled
     /**
      * The battery is not being charged.
+     *
      */
     | @!APILevel[
         22,
@@ -258,6 +281,7 @@ public enum BatteryChargeState {
     Disabled
     /**
      * The battery is fully charged.
+     *
      */
     | @!APILevel[
         22,
@@ -272,13 +296,14 @@ public enum BatteryChargeState {
             case 1 => Enabled
             case 2 => Disabled
             case 3 => Full
-            case _ => throw IllegalArgumentException("Unknown value.")
+            case _ => throw BusinessException(401, "Parameter error.")
         }
     }
 }
 
 /**
  * Battery health status of a device.
+ *
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -288,6 +313,7 @@ public enum BatteryChargeState {
 public enum BatteryHealthState {
     /**
      * Unknown state.
+     *
      */
     @!APILevel[
         22,
@@ -296,6 +322,7 @@ public enum BatteryHealthState {
     UnknownHealthState
     /**
      * The battery is in healthy state.
+     *
      */
     | @!APILevel[
         22,
@@ -304,6 +331,7 @@ public enum BatteryHealthState {
     Good
     /**
      * The battery is overheated.
+     *
      */
     | @!APILevel[
         22,
@@ -312,6 +340,7 @@ public enum BatteryHealthState {
     Overheat
     /**
      * The battery voltage is over high.
+     *
      */
     | @!APILevel[
         22,
@@ -320,6 +349,7 @@ public enum BatteryHealthState {
     Overvoltage
     /**
      * The battery temperature is low.
+     *
      */
     | @!APILevel[
         22,
@@ -328,6 +358,7 @@ public enum BatteryHealthState {
     Cold
     /**
      * The battery is dead.
+     *
      */
     | @!APILevel[
         22,
@@ -344,13 +375,14 @@ public enum BatteryHealthState {
             case 3 => Overvoltage
             case 4 => Cold
             case 5 => Dead
-            case _ => throw IllegalArgumentException("Unknown value.")
+            case _ => throw BusinessException(401, "Parameter error.")
         }
     }
 }
 
 /**
  * Battery capacity level of a device.
+ *
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -360,6 +392,7 @@ public enum BatteryHealthState {
 public enum BatteryCapacityLevel {
     /**
      * The battery is in full capacity level.
+     *
      */
     @!APILevel[
         22,
@@ -368,6 +401,7 @@ public enum BatteryCapacityLevel {
     LevelFull
     /**
      * The battery is in high capacity level.
+     *
      */
     | @!APILevel[
         22,
@@ -376,6 +410,7 @@ public enum BatteryCapacityLevel {
     LevelHigh
     /**
      * The battery is in normal capacity level.
+     *
      */
     | @!APILevel[
         22,
@@ -384,6 +419,7 @@ public enum BatteryCapacityLevel {
     LevelNormal
     /**
      * The battery is in low capacity level.
+     *
      */
     | @!APILevel[
         22,
@@ -392,6 +428,7 @@ public enum BatteryCapacityLevel {
     LevelLow
     /**
      * The battery is in warning low capacity level.
+     *
      */
     | @!APILevel[
         22,
@@ -400,6 +437,7 @@ public enum BatteryCapacityLevel {
     LevelWarning
     /**
      * The battery is in critical low capacity level.
+     *
      */
     | @!APILevel[
         22,
@@ -408,6 +446,7 @@ public enum BatteryCapacityLevel {
     LevelCritical
     /**
      * The battery is in the lowest capacity level, system will shut down automatically in a few seconds.
+     *
      */
     | @!APILevel[
         22,
@@ -425,7 +464,7 @@ public enum BatteryCapacityLevel {
             case 5 => LevelWarning
             case 6 => LevelCritical
             case 7 => LevelShutdown
-            case _ => throw IllegalArgumentException("Unknown value.")
+            case _ => throw BusinessException(401, "Parameter error.")
         }
     }
 }

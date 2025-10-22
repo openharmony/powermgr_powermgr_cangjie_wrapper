@@ -77,9 +77,9 @@ class Test_battery_info {
     @TestCase
     @Tag[APILevel21, TestLevel0]
     func test_BatteryInfoEnumBatteryChargeState() {
-        let chargingStatusArr: Array<BatteryChargeState> = [UnknownChargeState, Enable, Disable, Full]
-        let chargingStatusArr2: Array<BatteryChargeState> = [UnknownChargeState, Enable, Disable, Full]
-        let chargingStatusStrArr: Array<String> = ["BatteryChargeState.UnknownChargeState", "BatteryChargeState.Enable", "BatteryChargeState.Disable", "BatteryChargeState.Full"]
+        let chargingStatusArr: Array<BatteryChargeState> = [UnknownChargeState, Enabled, Disabled, Full]
+        let chargingStatusArr2: Array<BatteryChargeState> = [UnknownChargeState, Enabled, Disabled, Full]
+        let chargingStatusStrArr: Array<String> = ["BatteryChargeState.UnknownChargeState", "BatteryChargeState.Enabled", "BatteryChargeState.Disabled", "BatteryChargeState.Full"]
         for (i in 0..chargingStatusArr.size) {
             @Expect(chargingStatusArr[i].toString() == chargingStatusStrArr[i])
             @Expect(chargingStatusArr[i] == chargingStatusArr2[i])

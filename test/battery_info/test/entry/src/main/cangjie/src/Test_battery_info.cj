@@ -30,7 +30,7 @@ import kit.PerformanceAnalysisKit.Hilog
 @Test
 class Test_battery_info {
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_BatteryInfo() {
         let obj = BatteryInfo()
         let batterySOCInfo = BatteryInfo.batterySOC
@@ -58,7 +58,7 @@ class Test_battery_info {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_BatteryInfoEnumBatteryPluggedType() {
         let plyggedTypeArr: Array<BatteryPluggedType> = [UnknownType, Ac, Usb, Wireless]
         let plyggedTypeArr2: Array<BatteryPluggedType> = [UnknownType, Ac, Usb, Wireless]
@@ -75,7 +75,7 @@ class Test_battery_info {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_BatteryInfoEnumBatteryChargeState() {
         let chargingStatusArr: Array<BatteryChargeState> = [UnknownChargeState, Enabled, Disabled, Full]
         let chargingStatusArr2: Array<BatteryChargeState> = [UnknownChargeState, Enabled, Disabled, Full]
@@ -92,7 +92,7 @@ class Test_battery_info {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_BatteryInfoEnumBatteryHealthState() {
         let batteryHealthStateArr: Array<BatteryHealthState> = [UnknownHealthState, Good, Overheat, Overvoltage, Cold, Dead]
         let batteryHealthStateArr2: Array<BatteryHealthState> = [UnknownHealthState, Good, Overheat, Overvoltage, Cold, Dead]
@@ -109,7 +109,7 @@ class Test_battery_info {
     }
 
     @TestCase
-    @Tag[APILevel21, TestLevel0]
+    @Tag[APILevel22, TestLevel0]
     func test_BatteryInfoEnumBatteryCapacityLevel() {
         let batteryCapacityLevelArr: Array<BatteryCapacityLevel> = [LevelFull, LevelHigh, LevelNormal, LevelLow, LevelWarning, LevelCritical, LevelShutdown]
         let batteryCapacityLevelArr2: Array<BatteryCapacityLevel> = [LevelFull, LevelHigh, LevelNormal, LevelLow, LevelWarning, LevelCritical, LevelShutdown]

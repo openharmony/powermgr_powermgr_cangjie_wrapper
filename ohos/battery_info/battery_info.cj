@@ -18,7 +18,7 @@
 package ohos.battery_info
 
 import ohos.labels.APILevel
-import ohos.business_exception.*
+import ohos.business_exception.BusinessException
 
 import std.deriving.Derive
 

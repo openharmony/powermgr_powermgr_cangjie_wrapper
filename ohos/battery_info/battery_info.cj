@@ -28,7 +28,7 @@ import std.deriving.Derive
  * voltage, temperature, model, and charger type.
  */
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public class BatteryInfo {
@@ -36,7 +36,7 @@ public class BatteryInfo {
      * Battery state of charge (SoC) of the current device, in percent.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop batterySOC: Int32 {
@@ -51,7 +51,7 @@ public class BatteryInfo {
      * @throws { BusinessException } 401 - Parameter error.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop chargingStatus: BatteryChargeState {
@@ -67,7 +67,7 @@ public class BatteryInfo {
      * @throws { BusinessException } 401 - Parameter error.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop healthStatus: BatteryHealthState {
@@ -83,7 +83,7 @@ public class BatteryInfo {
      * @throws { BusinessException } 401 - Parameter error.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop pluggedType: BatteryPluggedType {
@@ -98,7 +98,7 @@ public class BatteryInfo {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop voltage: Int32 {
@@ -112,7 +112,7 @@ public class BatteryInfo {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop nowCurrent: Int32 {
@@ -126,7 +126,7 @@ public class BatteryInfo {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop technology: String {
@@ -143,7 +143,7 @@ public class BatteryInfo {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop batteryTemperature: Int32 {
@@ -157,7 +157,7 @@ public class BatteryInfo {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop isBatteryPresent: Bool {
@@ -172,7 +172,7 @@ public class BatteryInfo {
      * @throws { BusinessException } 401 - Parameter error.
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     public static prop batteryCapacityLevel: BatteryCapacityLevel {
@@ -189,7 +189,7 @@ public class BatteryInfo {
  */
 @Derive[ToString, Equatable]
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public enum BatteryPluggedType {
@@ -198,7 +198,7 @@ public enum BatteryPluggedType {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     UnknownType
@@ -207,7 +207,7 @@ public enum BatteryPluggedType {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Ac
@@ -216,7 +216,7 @@ public enum BatteryPluggedType {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Usb
@@ -225,7 +225,7 @@ public enum BatteryPluggedType {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Wireless
@@ -248,7 +248,7 @@ public enum BatteryPluggedType {
  */
 @Derive[ToString, Equatable]
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public enum BatteryChargeState {
@@ -257,7 +257,7 @@ public enum BatteryChargeState {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     UnknownChargeState
@@ -266,7 +266,7 @@ public enum BatteryChargeState {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Enabled
@@ -275,7 +275,7 @@ public enum BatteryChargeState {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Disabled
@@ -284,7 +284,7 @@ public enum BatteryChargeState {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Full
@@ -307,7 +307,7 @@ public enum BatteryChargeState {
  */
 @Derive[ToString, Equatable]
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public enum BatteryHealthState {
@@ -316,7 +316,7 @@ public enum BatteryHealthState {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     UnknownHealthState
@@ -325,7 +325,7 @@ public enum BatteryHealthState {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Good
@@ -334,7 +334,7 @@ public enum BatteryHealthState {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Overheat
@@ -343,7 +343,7 @@ public enum BatteryHealthState {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Overvoltage
@@ -352,7 +352,7 @@ public enum BatteryHealthState {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Cold
@@ -361,7 +361,7 @@ public enum BatteryHealthState {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Dead
@@ -386,7 +386,7 @@ public enum BatteryHealthState {
  */
 @Derive[ToString, Equatable]
 @!APILevel[
-    22,
+    since: "22",
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public enum BatteryCapacityLevel {
@@ -395,7 +395,7 @@ public enum BatteryCapacityLevel {
      *
      */
     @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelFull
@@ -404,7 +404,7 @@ public enum BatteryCapacityLevel {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelHigh
@@ -413,7 +413,7 @@ public enum BatteryCapacityLevel {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelNormal
@@ -422,7 +422,7 @@ public enum BatteryCapacityLevel {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelLow
@@ -431,7 +431,7 @@ public enum BatteryCapacityLevel {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelWarning
@@ -440,7 +440,7 @@ public enum BatteryCapacityLevel {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelCritical
@@ -449,7 +449,7 @@ public enum BatteryCapacityLevel {
      *
      */
     | @!APILevel[
-        22,
+        since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelShutdown

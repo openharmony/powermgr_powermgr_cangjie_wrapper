@@ -108,20 +108,6 @@ public class BatteryInfo {
     }
 
     /**
-     * Battery immediate current of the current device, in mA.
-     *
-     */
-    @!APILevel[
-        since: "22",
-        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
-    ]
-    public static prop nowCurrent: Int32 {
-        get() {
-            unsafe { FfiBatteryInfoGetBatteryNowCurrent() }
-        }
-    }
-
-    /**
      * Battery technology of the current device.
      *
      */
@@ -179,6 +165,20 @@ public class BatteryInfo {
         get() {
             let level = unsafe { FfiBatteryInfoGetCapacityLevel() }
             BatteryCapacityLevel.parse(level)
+        }
+    }
+
+    /**
+     * Battery immediate current of the current device, in mA.
+     *
+     */
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
+    public static prop nowCurrent: Int32 {
+        get() {
+            unsafe { FfiBatteryInfoGetBatteryNowCurrent() }
         }
     }
 }

@@ -39,7 +39,7 @@ public class BatteryInfo {
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
-    public static prop batterySOC: Int32 {
+    public static prop batterySoc: Int32 {
         get() {
             unsafe { FfiBatteryInfoBatterySOC() }
         }
@@ -47,8 +47,6 @@ public class BatteryInfo {
 
     /**
      * Battery charging status of the current device.
-     *
-     * @throws { BusinessException } 401 - Parameter error.
      */
     @!APILevel[
         since: "22",
@@ -63,8 +61,6 @@ public class BatteryInfo {
 
     /**
      * Battery health state of the current device.
-     *
-     * @throws { BusinessException } 401 - Parameter error.
      */
     @!APILevel[
         since: "22",
@@ -79,8 +75,6 @@ public class BatteryInfo {
 
     /**
      * Charger type of the current device.
-     *
-     * @throws { BusinessException } 401 - Parameter error.
      */
     @!APILevel[
         since: "22",
@@ -95,7 +89,6 @@ public class BatteryInfo {
 
     /**
      * Battery voltage of the current device, in µV.
-     *
      */
     @!APILevel[
         since: "22",
@@ -109,7 +102,6 @@ public class BatteryInfo {
 
     /**
      * Battery technology of the current device.
-     *
      */
     @!APILevel[
         since: "22",
@@ -126,7 +118,6 @@ public class BatteryInfo {
 
     /**
      * Battery temperature of the current device, in 0.1℃.
-     *
      */
     @!APILevel[
         since: "22",
@@ -140,7 +131,6 @@ public class BatteryInfo {
 
     /**
      * Battery present state of the current device.
-     *
      */
     @!APILevel[
         since: "22",
@@ -154,8 +144,6 @@ public class BatteryInfo {
 
     /**
      * Battery capacity level of the current device.
-     *
-     * @throws { BusinessException } 401 - Parameter error.
      */
     @!APILevel[
         since: "22",
@@ -170,7 +158,6 @@ public class BatteryInfo {
 
     /**
      * Battery immediate current of the current device, in mA.
-     *
      */
     @!APILevel[
         since: "22",
@@ -185,7 +172,6 @@ public class BatteryInfo {
 
 /**
  * Charger type of a device.
- *
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -195,36 +181,35 @@ public class BatteryInfo {
 public enum BatteryPluggedType {
     /**
      * Unknown type
-     *
      */
     @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     UnknownType
+    |
     /**
      * AC charger
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Ac
+    |
     /**
      * USB charger
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Usb
+    |
     /**
      * Wireless charger
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
@@ -244,7 +229,6 @@ public enum BatteryPluggedType {
 
 /**
  * Battery charging status of a device.
- *
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -254,36 +238,35 @@ public enum BatteryPluggedType {
 public enum BatteryChargeState {
     /**
      * Unknown state.
-     *
      */
     @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     UnknownChargeState
+    |
     /**
      * The battery is being charged.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Enabled
+    |
     /**
      * The battery is not being charged.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Disabled
+    |
     /**
      * The battery is fully charged.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
@@ -303,7 +286,6 @@ public enum BatteryChargeState {
 
 /**
  * Battery health status of a device.
- *
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -313,54 +295,53 @@ public enum BatteryChargeState {
 public enum BatteryHealthState {
     /**
      * Unknown state.
-     *
      */
     @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     UnknownHealthState
+    |
     /**
      * The battery is in healthy state.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Good
+    |
     /**
      * The battery is overheated.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Overheat
+    |
     /**
      * The battery voltage is over high.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Overvoltage
+    |
     /**
      * The battery temperature is low.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     Cold
+    |
     /**
      * The battery is dead.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
@@ -382,7 +363,6 @@ public enum BatteryHealthState {
 
 /**
  * Battery capacity level of a device.
- *
  */
 @Derive[ToString, Equatable]
 @!APILevel[
@@ -392,63 +372,62 @@ public enum BatteryHealthState {
 public enum BatteryCapacityLevel {
     /**
      * The battery is in full capacity level.
-     *
      */
     @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelFull
+    |
     /**
      * The battery is in high capacity level.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelHigh
+    |
     /**
      * The battery is in normal capacity level.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelNormal
+    |
     /**
      * The battery is in low capacity level.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelLow
+    |
     /**
      * The battery is in warning low capacity level.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelWarning
+    |
     /**
      * The battery is in critical low capacity level.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]
     LevelCritical
+    |
     /**
      * The battery is in the lowest capacity level, system will shut down automatically in a few seconds.
-     *
      */
-    | @!APILevel[
+    @!APILevel[
         since: "22",
         syscap: "SystemCapability.PowerManager.BatteryManager.Core"
     ]

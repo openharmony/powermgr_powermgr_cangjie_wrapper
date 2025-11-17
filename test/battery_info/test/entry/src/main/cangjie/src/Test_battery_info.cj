@@ -33,7 +33,7 @@ class Test_battery_info {
     @Tag[APILevel22, TestLevel0]
     func test_BatteryInfo() {
         let obj = BatteryInfo()
-        let batterySOCInfo = BatteryInfo.batterySOC
+        let batterySOCInfo = BatteryInfo.batterySoc
         let chargingStatusInfo = BatteryInfo.chargingStatus
         let healthStatusInfo = BatteryInfo.healthStatus
         let pluggedTypeInfo = BatteryInfo.pluggedType

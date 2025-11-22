@@ -34,6 +34,9 @@
             "inner_kits": [
                 {
                     "name": "//base/powermgr/powermgr_cangjie_wrapper/ohos/battery_info:ohos.battery_info"
+                },
+                {
+                    "name": "//base/powermgr/powermgr_cangjie_wrapper:copy_sdk_powermgr_cangjie_libs"
                 }
             ],
             "test": []

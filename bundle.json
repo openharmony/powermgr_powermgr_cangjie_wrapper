@@ -12,9 +12,7 @@
     "component": {
         "name": "powermgr_cangjie_wrapper",
         "subsystem": "powermgr",
-        "syscap": [
-            "SystemCapability.PowerManager.BatteryManager.Core"
-        ],
+        "syscap": [],
         "features": [],
         "adapted_system_type": [
             "standard"

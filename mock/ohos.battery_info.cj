@@ -18,9 +18,15 @@ package ohos.battery_info
 
 import ohos.labels.APILevel
 
-@!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+]
 public class BatteryInfo {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public static prop batterySoc: Int32 {
         
         get() {
@@ -28,7 +34,10 @@ public class BatteryInfo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public static prop chargingStatus: BatteryChargeState {
         
         get() {
@@ -36,7 +45,10 @@ public class BatteryInfo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public static prop healthStatus: BatteryHealthState {
         
         get() {
@@ -44,7 +56,10 @@ public class BatteryInfo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public static prop pluggedType: BatteryPluggedType {
         
         get() {
@@ -52,7 +67,10 @@ public class BatteryInfo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public static prop voltage: Int32 {
         
         get() {
@@ -60,7 +78,10 @@ public class BatteryInfo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public static prop nowCurrent: Int32 {
         
         get() {
@@ -68,7 +89,10 @@ public class BatteryInfo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public static prop technology: String {
         
         get() {
@@ -76,7 +100,10 @@ public class BatteryInfo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public static prop batteryTemperature: Int32 {
         
         get() {
@@ -84,7 +111,10 @@ public class BatteryInfo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public static prop isBatteryPresent: Bool {
         
         get() {
@@ -92,7 +122,10 @@ public class BatteryInfo {
         }
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public static prop batteryCapacityLevel: BatteryCapacityLevel {
         
         get() {
@@ -105,139 +138,267 @@ public class BatteryInfo {
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+]
 public enum BatteryPluggedType {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     UnknownType
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     Ac
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     Usb
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     Wireless
     | ...
 }
 
 extend BatteryPluggedType <: ToString {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public func toString(): String {
         return String()
     }
 }
 
 extend BatteryPluggedType <: Equatable<BatteryPluggedType> {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public operator func ==(other: BatteryPluggedType): Bool {
         return true
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public operator func !=(other: BatteryPluggedType): Bool {
         return true
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+]
 public enum BatteryChargeState {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     UnknownChargeState
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     Enabled
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     Disabled
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     Full
     | ...
 }
 
 extend BatteryChargeState <: ToString {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public func toString(): String {
         return String()
     }
 }
 
 extend BatteryChargeState <: Equatable<BatteryChargeState> {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public operator func ==(other: BatteryChargeState): Bool {
         return true
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public operator func !=(other: BatteryChargeState): Bool {
         return true
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+]
 public enum BatteryHealthState {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     UnknownHealthState
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     Good
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     Overheat
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     Overvoltage
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     Cold
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     Dead
     | ...
 }
 
 extend BatteryHealthState <: ToString {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public func toString(): String {
         return String()
     }
 }
 
 extend BatteryHealthState <: Equatable<BatteryHealthState> {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public operator func ==(other: BatteryHealthState): Bool {
         return true
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public operator func !=(other: BatteryHealthState): Bool {
         return true
     }
 }
 
-@!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+@!APILevel[
+    since: "22",
+    syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+]
 public enum BatteryCapacityLevel {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     LevelFull
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     LevelHigh
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     LevelNormal
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     LevelLow
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     LevelWarning
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     LevelCritical
-    | @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    |
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     LevelShutdown
     | ...
 }
 
 extend BatteryCapacityLevel <: ToString {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public func toString(): String {
         return String()
     }
 }
 
 extend BatteryCapacityLevel <: Equatable<BatteryCapacityLevel> {
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public operator func ==(other: BatteryCapacityLevel): Bool {
         return true
     }
 
-    @!APILevel[since: "22", syscap: "SystemCapability.PowerManager.BatteryManager.Core"]
+    @!APILevel[
+        since: "22",
+        syscap: "SystemCapability.PowerManager.BatteryManager.Core"
+    ]
     public operator func !=(other: BatteryCapacityLevel): Bool {
         return true
     }

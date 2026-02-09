@@ -32,6 +32,7 @@ import std.deriving.Derive
     syscap: "SystemCapability.PowerManager.BatteryManager.Core"
 ]
 public class BatteryInfo {
+    init() {}
     /**
      * Battery state of charge (SoC) of the current device, in percent.
      */

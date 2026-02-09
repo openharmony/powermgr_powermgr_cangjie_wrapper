@@ -133,7 +133,7 @@ public class BatteryInfo {
         }
     }
     
-    public init() {
+    init() {
         super()
     }
 }

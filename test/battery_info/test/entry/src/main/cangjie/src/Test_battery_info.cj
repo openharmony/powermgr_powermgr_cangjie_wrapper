@@ -32,7 +32,6 @@ class Test_battery_info {
     @TestCase
     @Tag[APILevel22, TestLevel0]
     func test_BatteryInfo() {
-        let obj = BatteryInfo()
         let batterySOCInfo = BatteryInfo.batterySoc
         let chargingStatusInfo = BatteryInfo.chargingStatus
         let healthStatusInfo = BatteryInfo.healthStatus

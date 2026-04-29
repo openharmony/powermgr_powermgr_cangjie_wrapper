@@ -44,7 +44,11 @@ class Test_battery_info {
         let nowCurrentInfo = BatteryInfo.nowCurrent
 
         @Expect(batterySOCInfo > 0 || batterySOCInfo < 100)
-        @Expect(isBatteryPresentInfo)
+        if (DeviceInfo.deviceType == "car") {
+            @Expect(isBatteryPresentInfo, false)
+        } else {
+            @Expect(isBatteryPresentInfo)
+        }
 
         // The following attribute information needs to be determined according to the environment and cannot be asserted.
 //        Hilog.info(0, "cangjie", chargingStatusInfo)

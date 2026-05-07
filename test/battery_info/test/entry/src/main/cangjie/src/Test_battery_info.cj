@@ -44,7 +44,7 @@ class Test_battery_info {
         let nowCurrentInfo = BatteryInfo.nowCurrent
 
         @Expect(batterySOCInfo > 0 || batterySOCInfo < 100)
-        if (DeviceInfo.deviceType == "car") {
+        if (DeviceInfo.deviceType == "car" || DeviceInfo.deviceType == "tv") {
             @Expect(isBatteryPresentInfo, false)
         } else {
             @Expect(isBatteryPresentInfo)
